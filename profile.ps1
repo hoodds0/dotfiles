@@ -1,8 +1,3 @@
-#///TODO: Update and/or Change Environment Variables
-#///TODO: Edit and Change Modules path to .\modules
-#///TODO: Read and automaticly run ps1 files in .\scripts
-#TODO: Create Alias
-
 using namespace System
 
 $local:Drive = (Get-Volume -FileSystemLabel 'Drive ( Remote )')
