@@ -18,7 +18,9 @@ if ( -not (Test-Path -Path '.\.cache') ) { New-Item -Path '.\' -Name '.cache' -I
 if ( -not (Test-Path -Path '.\.cache\downloads')) { New-Item -Path '.\.cache' -Name 'downloads' -ItemType Directory }
 if ( -not (Test-Path -Path '.\.cache\nuget')) { New-Item -Path '.\.cache' -Name 'nuget' -ItemType Directory }
 if ( -not (Test-Path -Path '.\.cache\nuget\http')) { New-Item -Path '.\.cache\nuget' -Name 'http' -ItemType Directory }
+if ( -not (Test-Path -Path '.\.cache\nuget\plugin')) { New-Item -Path '.\.cache\plugin' -Name 'plugin' -ItemType Directory }
 if ( -not (Test-Path -Path '.\.cache\nuget\temp')) { New-Item -Path '.\.cache\nuget' -Name 'temp' -ItemType Directory }
+if ( -not (Test-Path -Path '.\.cache\starship')) { New-Item -Path '.\.cache' -Name 'starship' -ItemType Directory }
 
 # Sets up Config Folder
 if ( -not (Test-Path -Path '.\.config') ) { New-Item -Path '.\' -Name '.config' -ItemType Directory }
@@ -42,4 +44,5 @@ if ( -not (Test-Path -Path '.\srv') ) { New-Item -Path '.\' -Name 'srv' -ItemTyp
 if ( -not (Test-Path -Path '.\proj') ) { New-Item -Path '.\' -Name 'proj' -ItemType Directory }
 
 
+#! Cleanup should be moved to another file
 if (Test-Path -Path '.\TEMP') { Remove-Item -Path '.\TEMP' -Force -Recurse }
