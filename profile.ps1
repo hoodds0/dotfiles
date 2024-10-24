@@ -60,4 +60,4 @@ Enable-TransientPrompt
 # Write-Host $RemoteDriveLetter
 # Write-Host $RemoteDrive
 # Write-Host $local:Path
-Get-ChildItem .\scripts | ForEach-Object -Process { & $_ }
+Get-ChildItem ($local:RemoteDriveRootFolders['CONF'] + '\powershell\scripts') | ForEach-Object -Process { & $_ }
