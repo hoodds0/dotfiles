@@ -11,6 +11,6 @@ My version of a portable work drive. Currently I have this on a 32GB Flash Drive
 - [X] ~~Update and/or Change Environment Variables~~
 - [X] ~~Edit and Change Modules path to .\\.conf\powershell\modules~~
 - [X] ~~Read and automaticly run ps1 files in .\scripts~~
-- [X] Update logic for PowerShell Language
+- [X] ~~Update logic for PowerShell Language~~
 - [ ] Create needed Alias
 - [ ] Version System for profile.ps1 to skip most setup
