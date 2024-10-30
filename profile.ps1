@@ -24,6 +24,9 @@ $local:Path = ($local:RemoteDriveRootFolders['SBIN'] + ';') `
 if ( [Environment]::GetEnvironmentVariable('RemoteDriveLetter', [EnvironmentVariableTarget]::User) -notmatch $RemoteDriveLetter ) 
 { [Environment]::SetEnvironmentVariable('RemoteDriveLetter', $RemoteDriveLetter, [EnvironmentVariableTarget]::User) }
 
+if ( [Environment]::GetEnvironmentVariable('RemoteDriveCache', [EnvironmentVariableTarget]::User) -notmatch [regex]::escape($local:RemoteDriveRootFolders['CACH']))
+{ [Environment]::SetEnvironmentVariable('RemoteDriveCache', $local:RemoteDriveRootFolders['CACH'], [EnvironmentVariableTarget]::User) }
+
 if ( [Environment]::GetEnvironmentVariable('Path', [EnvironmentVariableTarget]::User) -notmatch [regex]::escape($local:Path) ) 
 { [Environment]::SetEnvironmentVariable('Path', ( $local:Path + [Environment]::GetEnvironmentVariable('Path', [EnvironmentVariableTarget]::Machine) ), [EnvironmentVariableTarget]::User ) }
 
