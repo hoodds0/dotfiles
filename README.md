@@ -1,5 +1,5 @@
 # Dotfiles
-All of my personal dotfiles. Each branch is its own dotfile system. If you are confused about what branch has what dotfiles then the name of each branch is beside what it belongs to. All Window's dotfiles have an install script, `Install-<Branch>.ps1`, that needs to be ran where you want the dotfiles to build from. All other systems are just one clone away.
+All of my personal dotfiles. Each branch is its own dotfile system. If you are confused about what branch has what dotfiles then the name of each branch is beside what it belongs to. Make sure to read the section to see if you need to run a install script or not.
 
 ## Portable *(winable)*
 > [!NOTE]
@@ -12,5 +12,5 @@ My version of a portable work drive. Currently I have this on a 32GB Flash Drive
 - [X] ~~Edit and Change Modules path to .\\.conf\powershell\modules~~
 - [X] ~~Read and automaticly run ps1 files in .\scripts~~
 - [ ] Create needed Alias
-
-## Windows 11
+- [ ] Modules to Update languages
+- [ ] Version System for profile.ps1 to skip most setup
