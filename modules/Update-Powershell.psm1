@@ -108,7 +108,7 @@ function Install-PowerShell {
         Move-Item -Path $Folder.FullName -Destination "$SystemBin\powershell" -Confirm:($ConfirmPreference -ne 'None')
     }
 }
-function Clear-PowerShell {
+function Clear-DownloadedPowerShell {
     [CmdletBinding(SupportsShouldProcess, ConfirmImpact = 'High')]
     param 
     (
@@ -144,6 +144,6 @@ function Update-PowerShell {
         Get-PowerShell -Force ($Force -or $ConfirmPreference -eq 'None') -Version $Version
         Expand-PowerShell -Force ($Force -or $ConfirmPreference -eq 'None')
         Install-PowerShell -Force ($Force -or $ConfirmPreference -eq 'None')
-        if ($Clean) { Clear-PowerShell }
+        if ($Clean) { Clear-DownloadedPowerShell }
     }
 }
