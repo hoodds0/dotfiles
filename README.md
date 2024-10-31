@@ -1,7 +1,7 @@
 # Dotfiles
 All of my personal dotfiles. Each branch is its own dotfile system. If you are confused about what branch has what dotfiles then the name of each branch is beside what it belongs to. Make sure to read the section to see if you need to run a install script or not.
 
-## Portable *(winable)* - v0.0.0
+## Portable *(winable)* - aaaaaaa
 > [!NOTE]
 > You need to run `Install-Winable.ps1` after cloning. You also need to be in the Directory where you want the folders to build.
 
