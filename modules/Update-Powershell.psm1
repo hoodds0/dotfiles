@@ -130,7 +130,7 @@ function Update-PowerShell {
     param 
     (
         [Switch] $Force,
-        [Switch] $Clean
+        [Switch] $Cleanup
     )
     begin {
         if ($Force -and -not $PSBoundParameters.ContainsKey('Confirm')) { $ConfirmPreference = 'None' }
@@ -144,6 +144,6 @@ function Update-PowerShell {
         Get-PowerShell -Force ($Force -or $ConfirmPreference -eq 'None') -Version $Version
         Expand-PowerShell -Force ($Force -or $ConfirmPreference -eq 'None')
         Install-PowerShell -Force ($Force -or $ConfirmPreference -eq 'None')
-        if ($Clean) { Clear-DownloadedPowerShell }
     }
+    end { if ($Cleanup) { Clear-DownloadedPowerShell } }
 }
