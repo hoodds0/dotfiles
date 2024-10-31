@@ -67,11 +67,7 @@ if ($PSCmdlet.ShouldContinue('Create', 'Project Folders')) {
     if ( -not (Test-Path -Path '.\proj') ) { New-Item -Path '.\' -Name 'proj' -ItemType Directory }
 }
 
-
-Copy-Item -Confirm:$true -Path '.\TEMP\profile.ps1' -Destination '.\.conf\powershell'
-Copy-Item -Confirm:$true -Recurse -Path '.\TEMP\modules' -Destination '.\.conf\powershell'
-Copy-Item -Confirm:$true -Recurse -Path '.\TEMP\scripts' -Destination '.\.conf\powershell'
-
+Install-Profile -Confirm:$true
 
 
 #! Cleanup should be moved to another file
