@@ -13,5 +13,6 @@ My version of a portable work drive. Currently I have this on a 32GB Flash Drive
 - [X] ~~Read and automaticly run ps1 files in .\scripts~~
 - [X] ~~Update logic for PowerShell Language~~
 - [X] ~~Update logic for the profile~~
+- [ ] Update logic for Code *(VSCode like programs)*
 - [ ] Create needed Alias
 - [ ] Version System for profile.ps1 to skip most setup
