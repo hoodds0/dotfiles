@@ -12,7 +12,12 @@ Clear-Host
 if ( -not $PSCmdlet.ShouldProcess('Install', 'dotfiles winable') ) { exit 1 }
 if ( -not (Test-Path -Path '.\TEMP') ) { New-Item -Path '.\' -Name 'TEMP' -ItemType Directory }
 Invoke-Expression 'git clone https://github.com/hoodds0/dotfiles.git -b winable .\TEMP'
+Import-Module -Name '.\TEMP\modules'
 
+Set-Location -Path '.\TEMP'
+$Version = Invoke-Expression "git log --pretty=format:'%h' -n 1"
+Set-Location -Path '.\..'
+[System.Environment]::SetEnvironmentVariable('RemoteDriveVersion', $Version, [System.EnvironmentVariableTarget]::User)
 
 Clear-Host
 Write-Host 'If folders already exist than nothing will happen.'
